@@ -1,41 +1,36 @@
 // CUSTOM CSS PROPERTIES (VARIABLES)
 html {
   --default-font-size: 1.6rem;
-  --default-font-family: "Segoe UI Regular", sans-serif;
-  --default-font-family-bold: "Segoe UI Bold", sans-serif;
-  --default-font-family-italic: "Segoe UI Italic", sans-serif;
-  --default-font-family-bold-italic: "Segoe UI Bold Italic", sans-serif;
+  --default-font-family: "Open Sans", sans-serif;
 }
 
-// FONTS
-@font-face {
-  font-family: "Segoe UI Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Segoe UI Regular"),
-    url("./assets/fonts/segoe-ui/segoe-ui.woff") format("woff");
+// FOR BASE STYLES
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Segoe UI Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Segoe UI Italic"),
-    url("./assets/fonts/segoe-ui/segoe-ui-italic.woff") format("woff");
+html {
+  // This defines the value of 1rem.
+  font-size: 62.5%; // 62.5% of 16px (default browser font size) = 10px
 }
 
-@font-face {
-  font-family: "Segoe UI Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Segoe UI Bold"),
-    url("./assets/fonts/segoe-ui/segoe-ui-bold.woff") format("woff");
+html,
+body {
+  min-height: 100vh;
 }
 
-@font-face {
-  font-family: "Segoe UI Bold Italic";
-  font-style: normal;
+body {
+  border: 1px solid red;
+  font-family: var(--default-font-family);
+  font-size: var(--default-font-size);
   font-weight: normal;
-  src: local("Segoe UI Bold Italic"),
-    url("./assets/fonts/segoe-ui/segoe-ui-bold-italic.woff") format("woff");
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }

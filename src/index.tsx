@@ -4,12 +4,6 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// fonts
-import "./assets/fonts/segoe-ui/segoe-ui.woff";
-import "./assets/fonts/segoe-ui/segoe-ui-bold.woff";
-import "./assets/fonts/segoe-ui/segoe-ui-bold-italic.woff";
-import "./assets/fonts/segoe-ui/segoe-ui-italic.woff";
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
