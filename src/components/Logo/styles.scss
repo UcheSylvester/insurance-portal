@@ -1,0 +1,13 @@
+.brand {
+  &-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-name {
+    color: var(--color-black);
+    font-size: 1.6rem;
+    margin-left: 1.1rem;
+  }
+}
