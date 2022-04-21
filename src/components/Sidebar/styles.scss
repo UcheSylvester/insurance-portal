@@ -5,5 +5,42 @@
   max-width: 100%;
   width: 30.6rem;
   box-shadow: var(--box-shadow-sidebar);
-  padding: 3rem 0;
+  padding: 3rem;
+
+  .avatar {
+    margin-top: 2.2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  &__user {
+    &-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      color: var(--color-grey);
+    }
+
+    &-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 2.1rem;
+      color: var(--color-secondary);
+    }
+
+    &-welcome-note {
+      font-size: 1rem;
+      margin: 0.4rem 0;
+    }
+
+    &-plan {
+      font-size: 1.4rem;
+
+      span {
+        color: var(--color-tertiary);
+      }
+    }
+  }
 }
