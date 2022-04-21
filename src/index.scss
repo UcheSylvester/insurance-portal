@@ -1,0 +1,41 @@
+// CUSTOM CSS PROPERTIES (VARIABLES)
+html {
+  --default-font-size: 1.6rem;
+  --default-font-family: "Segoe UI Regular", sans-serif;
+  --default-font-family-bold: "Segoe UI Bold", sans-serif;
+  --default-font-family-italic: "Segoe UI Italic", sans-serif;
+  --default-font-family-bold-italic: "Segoe UI Bold Italic", sans-serif;
+}
+
+// FONTS
+@font-face {
+  font-family: "Segoe UI Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Regular"),
+    url("./assets/fonts/segoe-ui/segoe-ui.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Italic"),
+    url("./assets/fonts/segoe-ui/segoe-ui-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold"),
+    url("./assets/fonts/segoe-ui/segoe-ui-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold Italic"),
+    url("./assets/fonts/segoe-ui/segoe-ui-bold-italic.woff") format("woff");
+}
