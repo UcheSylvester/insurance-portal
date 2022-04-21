@@ -2,6 +2,17 @@
 html {
   --default-font-size: 1.6rem;
   --default-font-family: "Open Sans", sans-serif;
+
+  --box-shadow-header: 3px 5px 15px rgba(0, 0, 0, 0.1);
+
+  --color-primary: #713bdb;
+  --color-secondary: #888cb7;
+  --color-tertiary: #a2a4b9;
+
+  --color-text: #42474a;
+  --color-black: #000000;
+  --color-grey: #a2a4b9;
+  --color-grey-light: #f4f5f9;
 }
 
 // FOR BASE STYLES
@@ -24,9 +35,9 @@ body {
 }
 
 body {
-  border: 1px solid red;
   font-family: var(--default-font-family);
   font-size: var(--default-font-size);
+  color: var(--color-text);
   font-weight: normal;
 }
 

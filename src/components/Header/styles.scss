@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 8.5rem;
+  box-shadow: var(--box-shadow-header);
+  width: 100%;
+
+  &__navigation {
+    margin-left: 5.5rem;
+    display: flex;
+
+    .link {
+      margin-left: 3.5rem;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.link {
+  color: var(--color-text);
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  position: relative;
+
+  &--active {
+    color: var(--color-primary);
+  }
+
+  &--underlined {
+    &::after {
+      content: "";
+      display: block;
+      width: 1.3rem;
+      height: 2px;
+      background-color: var(--color-primary);
+      margin-top: 0.2rem;
+      border-radius: 0.2rem;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+  }
+}

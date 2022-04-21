@@ -1,3 +1,9 @@
-const Sidebar = () => <h1>Side bar</h1>;
+import "./styles.scss";
+
+const Sidebar = () => (
+  <nav className="sidebar">
+    <h1>side bar</h1>
+  </nav>
+);
 
 export default Sidebar;
