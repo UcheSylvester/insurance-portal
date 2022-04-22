@@ -1,12 +1,18 @@
 import Avatar from "../Avatar";
 import Logo from "../Logo";
+import Button from "../Button";
 
 import LadyImage from "../../assets/images/lady.png";
 
 import "./styles.scss";
-import Button from "../Button";
+import { ILink } from "../../routes/links";
+import Link from "../Link";
 
-const Sidebar = () => (
+export interface SiderbarProps {
+  links: ILink[];
+}
+
+const Sidebar: React.FC<SiderbarProps> = ({ links }) => (
   <nav className="sidebar">
     <Logo brandName="Insurance Portal" />
 
@@ -25,6 +31,16 @@ const Sidebar = () => (
     <Button>
       Create New Plan <span>+</span>
     </Button>
+
+    <ul className="sidebar__links">
+      {links.map(({ label, path, icon: Icon }) => (
+        <li className="sidebar__link" key={path}>
+          <Link to={path}>
+            <Icon /> {label}
+          </Link>
+        </li>
+      ))}
+    </ul>
   </nav>
 );
 

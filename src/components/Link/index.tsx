@@ -10,11 +10,15 @@ export interface LinkProps extends RouterLinkProps {
   isUnderlined?: boolean;
 }
 
-const Link: React.FC<LinkProps> = ({ isUnderlined, ...otherProps }) => (
+const Link: React.FC<LinkProps> = ({
+  isUnderlined,
+  className = "",
+  ...otherProps
+}) => (
   <RouterLink
     className={(isActive) =>
       !isActive
-        ? "link"
+        ? `link ${className}`
         : `link link--active ${isUnderlined ? "link--underlined" : ""}`
     }
     {...otherProps}

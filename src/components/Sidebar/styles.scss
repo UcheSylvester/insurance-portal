@@ -47,4 +47,24 @@
   .button span {
     margin-left: 0.5rem;
   }
+
+  &__links {
+    margin-top: 4rem;
+  }
+
+  &__link {
+    margin-top: 2.8rem;
+
+    .link {
+      color: var(--color-grey);
+
+      &--active {
+        color: var(--color-primary);
+      }
+
+      svg {
+        margin-right: 3rem;
+      }
+    }
+  }
 }

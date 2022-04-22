@@ -1,3 +1,4 @@
+import { basicLinks, sideLinks } from "../../routes/links";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
 
@@ -10,10 +11,10 @@ export interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="layout">
-      <Sidebar />
+      <Sidebar links={sideLinks} />
 
       <div className="layout__content">
-        <Header />
+        <Header links={basicLinks} />
         <main>{children}</main>
       </div>
     </div>
