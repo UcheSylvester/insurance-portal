@@ -1,12 +1,14 @@
 import Avatar from "../Avatar";
 import Logo from "../Logo";
 import Button from "../Button";
+import Link from "../Link";
 
 import LadyImage from "../../assets/images/lady.png";
+import { ReactComponent as LogoutIcon } from "../../assets/icons/logout.svg";
+
+import { ILink } from "../../routes/links";
 
 import "./styles.scss";
-import { ILink } from "../../routes/links";
-import Link from "../Link";
 
 export interface SiderbarProps {
   links: ILink[];
@@ -41,6 +43,10 @@ const Sidebar: React.FC<SiderbarProps> = ({ links }) => (
         </li>
       ))}
     </ul>
+
+    <Button className="sidebar__logout" variant="ghost">
+      <LogoutIcon /> Log out
+    </Button>
   </nav>
 );
 

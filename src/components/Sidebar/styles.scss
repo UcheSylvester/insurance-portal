@@ -67,4 +67,15 @@
       }
     }
   }
+
+  &__logout {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
 }
