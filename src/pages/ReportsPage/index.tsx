@@ -1,4 +1,5 @@
 import ReportCard from "../../components/ReportCard";
+import { REPORT_DATA } from "./data";
 import "./styles.scss";
 
 const ReportsPage = () => {
@@ -8,9 +9,9 @@ const ReportsPage = () => {
 
       {/* Cards */}
       <section className="reports-page__cards">
-        <ReportCard />
-        <ReportCard />
-        <ReportCard />
+        {REPORT_DATA.map((data) => (
+          <ReportCard {...data} key={data.id} />
+        ))}
       </section>
     </main>
   );

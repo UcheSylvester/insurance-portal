@@ -1,25 +1,23 @@
+import { Metric } from "../../pages/ReportsPage/data";
 import "./styles.scss";
 
-export interface SliderProps {
-  percentage: number;
-  price: number;
+export interface SliderProps extends Metric {
   activeBackgroundColor: string;
-  currenecy?: string;
-  title: string;
+  currency: string;
 }
 
 const Slider: React.FC<SliderProps> = ({
   percentage,
-  price,
+  amount,
   activeBackgroundColor,
-  currenecy = "$",
-  title,
+  currency = "$",
+  name,
 }) => (
   <div className="slider__container">
     <div className="slider__title-price">
-      <p className="slider__title">{title}</p>
+      <p className="slider__title">{name}</p>
       <p className="slider__price">
-        {price} <span>{currenecy}</span>
+        {amount} <span>{currency}</span>
       </p>
     </div>
 

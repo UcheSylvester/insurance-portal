@@ -1,29 +1,32 @@
+import { Report, SLIDER_COLOR } from "../../pages/ReportsPage/data";
 import Slider from "../Slider";
 import "./styles.scss";
 
-const ReportCard = () => (
+export interface ReportCardProps extends Report {}
+
+const ReportCard: React.FC<ReportCardProps> = ({
+  value,
+  currency,
+  name,
+  metrics,
+}) => (
   <article className="report-card">
     <div className="report-card__title-container">
       <p className="report-card__value">
-        1000 <span>$</span>
+        {value} <span>{currency}</span>
       </p>
 
-      <h3 className="report-card__title">Total Value of Disbursement</h3>
+      <h3 className="report-card__title">{name}</h3>
     </div>
 
-    <Slider
-      percentage={40}
-      price={400}
-      title="Policy"
-      activeBackgroundColor="red"
-    />
-
-    <Slider
-      percentage={40}
-      price={400}
-      title="Policy"
-      activeBackgroundColor="red"
-    />
+    {metrics.map((metric) => (
+      <Slider
+        {...metric}
+        key={metric.id}
+        activeBackgroundColor={SLIDER_COLOR[metric.name]}
+        currency={currency}
+      />
+    ))}
   </article>
 );
 
