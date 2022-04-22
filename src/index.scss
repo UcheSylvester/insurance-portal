@@ -7,6 +7,7 @@ html {
   --box-shadow-sidebar: 10px 3px 15px rgba(0, 0, 0, 0.05);
   --box-shadow-button: inset 0px 4px 4px rgba(0, 0, 0, 0.12);
   --box-shadow-card: 3px 3px 4px rgba(0, 0, 0, 0.06);
+  --box-shadow-banner: 0px 0px 15px rgba(0, 0, 0, 0.15);
 
   --color-primary: #713bdb;
   --color-secondary: #888cb7;
@@ -16,10 +17,10 @@ html {
   --color-black: #000000;
   --color-grey: #a2a4b9;
   --color-grey-light: #f4f5f9;
-
   --color-grey-super-light: linear-gradient(90deg, #ececec 0%, #f2f1f1 111.47%);
   --color-white: #ffffff;
   --color-white-beije: #fffbfb;
+  --color-white-beije-light: #f8f9ff;
 }
 
 // FOR BASE STYLES

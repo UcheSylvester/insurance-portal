@@ -1,0 +1,45 @@
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white-beije-light);
+  box-shadow: var(--box-shadow-banner);
+  position: relative;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 60%;
+    right: 0;
+  }
+
+  &__title {
+    font-size: 3.3rem;
+    line-height: 4.4rem;
+    font-weight: 600;
+  }
+
+  &__promo {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+
+    &-code {
+      border: 1px dashed var(--color-text);
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      margin-right: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .button {
+      color: var(--color-text);
+      font-weight: 600;
+      font-size: 2rem;
+    }
+  }
+}
