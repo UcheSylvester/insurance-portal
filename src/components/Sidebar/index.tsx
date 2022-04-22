@@ -4,6 +4,7 @@ import Logo from "../Logo";
 import LadyImage from "../../assets/images/lady.png";
 
 import "./styles.scss";
+import Button from "../Button";
 
 const Sidebar = () => (
   <nav className="sidebar">
@@ -20,6 +21,10 @@ const Sidebar = () => (
         Your Plan : <span>Free</span>
       </p>
     </div>
+
+    <Button>
+      Create New Plan <span>+</span>
+    </Button>
   </nav>
 );
 
