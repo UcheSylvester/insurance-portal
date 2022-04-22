@@ -1,6 +1,9 @@
 import BannerImage from "../../assets/images/insurance-agency.png";
 import Button from "../Button";
 
+import { ReactComponent as PrimaryBannerPattern } from "../../assets/icons/primary-banner-pattern.svg";
+import { ReactComponent as BannerPattern } from "../../assets/icons/banner-pattern.svg";
+
 import "./styles.scss";
 
 const Banner = () => (
@@ -15,6 +18,9 @@ const Banner = () => (
         <Button variant="ghost">Copy Code</Button>
       </div>
     </div>
+
+    <PrimaryBannerPattern className="banner__pattern banner__pattern--primary" />
+    <BannerPattern className="banner__pattern banner__pattern--secondary" />
   </section>
 );
 

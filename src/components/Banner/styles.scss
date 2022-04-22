@@ -42,4 +42,11 @@
       font-size: 2rem;
     }
   }
+
+  &__pattern {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.1;
+    width: 100%;
+  }
 }
