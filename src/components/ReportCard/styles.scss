@@ -1,0 +1,28 @@
+.report-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: var(--box-shadow-card);
+  max-width: 31.4rem;
+  width: 100%;
+  height: 29.8rem;
+  padding: 0 2.6rem;
+
+  &__value {
+    font-size: 5.5rem;
+    display: flex;
+    font-weight: normal;
+
+    span {
+      font-size: 2.7rem;
+      align-self: flex-start;
+      color: var(--color-primary);
+    }
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+  }
+}

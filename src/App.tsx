@@ -1,10 +1,11 @@
 import "./App.scss";
 import Layout from "./components/Layout";
+import ReportsPage from "./pages/ReportsPage";
 
 function App() {
   return (
     <Layout>
-      <h1>MAIN APP</h1>
+      <ReportsPage />
     </Layout>
   );
 }

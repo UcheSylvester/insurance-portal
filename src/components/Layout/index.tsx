@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       <div className="layout__content">
         <Header links={basicLinks} />
-        <main>{children}</main>
+        {children}
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 .layout {
   display: flex;
-  border: 1px solid red;
   min-height: 100vh;
 
   &__content {
     flex: 1;
+    background-color: var(--color-grey-light);
   }
 }
