@@ -1,6 +1,6 @@
 # Insurance Portal
 
-**Dashboard for Insurance portal**
+**Dashboard for Insurance portal built with React, Typescript, SCSS**
 
 ## Getting started
 
