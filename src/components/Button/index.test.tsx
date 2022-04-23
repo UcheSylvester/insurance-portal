@@ -6,7 +6,7 @@ import Button, { ButtonProps } from ".";
 const renderButton = (props?: Partial<ButtonProps>) => {
   const defaultProps: ButtonProps = {};
 
-  return render(<Button {...defaultProps} {...props} />);
+  render(<Button {...defaultProps} {...props} />);
 };
 
 describe("<Button />", () => {
