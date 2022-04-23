@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 
 import Link, { LinkProps } from ".";
@@ -20,10 +21,14 @@ const renderLink = (props?: Partial<LinkProps>) => {
 
 describe("<Link />", () => {
   it("should render children", () => {
-    renderLink();
+    const setActiveLink = jest.fn();
+    renderLink({ setActiveLink });
 
     const link = screen.getByRole("link", { name: "home" });
     expect(link).toBeInTheDocument();
+
+    userEvent.click(link);
+    expect(setActiveLink).toHaveBeenCalledWith("/");
   });
 
   it("should render to", () => {
