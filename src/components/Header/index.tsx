@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ links, toggleSidebar }) => (
     >
       <MenuIcon />
     </Button>
-    <nav className="header__navigation">
+    <nav className="header__navigation" aria-label="header navigation">
       {links.map(({ label, path }) => (
         <Link to={path} key={path} isUnderlined>
           {label}
