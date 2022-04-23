@@ -12,20 +12,28 @@ import { ILink } from "../../routes/links";
 
 import "./styles.scss";
 
-export interface SiderbarProps {
+export interface SidebarProps {
   links: ILink[];
   isSidebarOpen: boolean;
   toggleSidebar: () => void;
 }
 
-const Sidebar: React.FC<SiderbarProps> = ({
+const Sidebar: React.FC<SidebarProps> = ({
   links,
   isSidebarOpen,
   toggleSidebar,
 }) => (
   <>
-    <nav className={`sidebar ${isSidebarOpen ? "sidebar--open" : ""}`}>
-      <Button variant="ghost" className="sidebar__menu" onClick={toggleSidebar}>
+    <nav
+      aria-label="side navigation"
+      className={`sidebar ${isSidebarOpen ? "sidebar--open" : ""}`}
+    >
+      <Button
+        variant="ghost"
+        aria-label="toggle sidebar"
+        className="sidebar__menu"
+        onClick={toggleSidebar}
+      >
         {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
       </Button>
 
@@ -51,7 +59,7 @@ const Sidebar: React.FC<SiderbarProps> = ({
         {links.map(({ label, path, icon: Icon }) => (
           <li className="sidebar__link" key={path}>
             <Link to={path}>
-              <Icon /> <span>{label}</span>
+              <Icon aria-label="link icon" /> <span>{label}</span>
             </Link>
           </li>
         ))}
@@ -63,6 +71,7 @@ const Sidebar: React.FC<SiderbarProps> = ({
     </nav>
 
     <div
+      role="dialog"
       className={`sidebar__overlay${isSidebarOpen ? "--open" : ""}`}
       onClick={toggleSidebar}
     />
