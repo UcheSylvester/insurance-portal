@@ -8,7 +8,7 @@ import "./styles.scss";
 
 const Banner = () => (
   <section className="banner">
-    <img src={BannerImage} alt="banner" />
+    <img src={BannerImage} alt="banner" className="banner__image" />
 
     <div className="banner__details">
       <h2 className="banner__title">20% Safe On Your First Account</h2>

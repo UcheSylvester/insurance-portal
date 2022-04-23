@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { basicLinks, sideLinks } from "../../routes/links";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
@@ -9,12 +10,20 @@ export interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
   return (
     <div className="layout">
-      <Sidebar links={sideLinks} />
+      <Sidebar
+        links={sideLinks}
+        isSidebarOpen={isSidebarOpen}
+        toggleSidebar={toggleSidebar}
+      />
 
       <div className="layout__content">
-        <Header links={basicLinks} />
+        <Header toggleSidebar={toggleSidebar} links={basicLinks} />
         {children}
       </div>
     </div>

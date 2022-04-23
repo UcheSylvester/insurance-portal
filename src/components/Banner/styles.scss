@@ -1,9 +1,20 @@
+@mixin transparentBackgroundColor($color, $opacity) {
+  background-color: rgba(red($color), green($color), blue($color), $opacity);
+}
+
 .banner {
   display: flex;
   align-items: center;
   background-color: var(--color-white-beije-light);
   box-shadow: var(--box-shadow-banner);
   position: relative;
+  height: 33rem;
+
+  &__image {
+    max-width: 52rem;
+    width: 100%;
+    height: auto;
+  }
 
   &__details {
     display: flex;
@@ -11,12 +22,16 @@
     align-items: center;
     text-align: center;
     position: absolute;
-    width: 60%;
+    width: 100%;
+    padding: 1rem;
     right: 0;
+    border-radius: 0.5rem;
+
+    @include transparentBackgroundColor(white, 0.2);
   }
 
   &__title {
-    font-size: 3.3rem;
+    font-size: 2rem;
     line-height: 4.4rem;
     font-weight: 600;
   }
@@ -24,12 +39,12 @@
   &__promo {
     display: flex;
     align-items: center;
-    font-size: 2.2rem;
-    margin-top: 2rem;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
 
     &-code {
       border: 1px dashed var(--color-text);
-      padding: 1rem 1.5rem;
+      padding: 1rem;
       border-radius: 0.5rem;
       margin-right: 2rem;
       font-weight: 400;
@@ -39,7 +54,7 @@
     .button {
       color: var(--color-text);
       font-weight: 600;
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
   }
 
@@ -48,5 +63,32 @@
     bottom: 0;
     opacity: 0.1;
     width: 100%;
+  }
+
+  @media screen and (min-width: 640px) {
+    &__details {
+      width: 60%;
+      background-color: transparent;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    &__title {
+      font-size: 3.3rem;
+      line-height: 4.4rem;
+    }
+
+    &__promo {
+      font-size: 2.2rem;
+      margin-top: 2rem;
+
+      &_code {
+        padding: 1rem 1.5rem;
+      }
+
+      .button {
+        font-size: 2rem;
+      }
+    }
   }
 }

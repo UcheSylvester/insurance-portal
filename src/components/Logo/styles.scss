@@ -9,5 +9,12 @@
     color: var(--color-black);
     font-size: 1.6rem;
     margin-left: 1.1rem;
+    display: none;
+  }
+
+  @media screen and (min-width: 1000px) {
+    &-name {
+      display: block;
+    }
   }
 }

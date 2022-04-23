@@ -4,13 +4,44 @@
   min-height: 8.5rem;
   box-shadow: var(--box-shadow-header);
   width: 100%;
+  background-color: var(--color-white);
+
+  .button.header__menu {
+    width: fit-content;
+    margin-left: 1rem;
+
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: var(--color-text);
+    }
+  }
 
   &__navigation {
-    margin-left: 5.5rem;
     display: flex;
 
     .link {
-      margin-left: 3.5rem;
+      margin-left: 2.8rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .button.header__menu {
+      display: none;
+    }
+
+    &__navigation {
+      margin-left: 3rem;
+
+      .link {
+        margin-left: 3.5rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    &__navigation {
+      margin-left: 5.5rem;
     }
   }
 }
