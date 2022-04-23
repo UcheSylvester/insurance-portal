@@ -9,6 +9,7 @@ export interface HeaderProps {
   links: ILink[];
   toggleSidebar: () => void;
 }
+
 const Header: React.FC<HeaderProps> = ({ links, toggleSidebar }) => (
   <header className="header">
     <Button variant="ghost" className="header__menu" onClick={toggleSidebar}>

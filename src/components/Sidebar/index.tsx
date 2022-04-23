@@ -62,10 +62,10 @@ const Sidebar: React.FC<SiderbarProps> = ({
       </Button>
     </nav>
 
-    {/* <div
-        className={`sidebar__overlay${isSidebarOpen ? "--open" : ""}`}
-        onClick={toggleSidebar}
-      /> */}
+    <div
+      className={`sidebar__overlay${isSidebarOpen ? "--open" : ""}`}
+      onClick={toggleSidebar}
+    />
   </>
 );
 
