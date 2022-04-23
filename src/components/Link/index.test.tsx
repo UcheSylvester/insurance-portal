@@ -7,6 +7,8 @@ const renderLink = (props?: Partial<LinkProps>) => {
   const defaultProps: LinkProps = {
     children: "home",
     to: "/",
+    activeLink: "/",
+    setActiveLink: jest.fn(),
   };
 
   render(

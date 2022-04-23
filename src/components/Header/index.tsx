@@ -8,9 +8,16 @@ import { ReactComponent as MenuIcon } from "../../assets/icons/menu-icon.svg";
 export interface HeaderProps {
   links: ILink[];
   toggleSidebar: () => void;
+  activeLink: string;
+  setActiveLink: (path: string) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ links, toggleSidebar }) => (
+const Header: React.FC<HeaderProps> = ({
+  links,
+  toggleSidebar,
+  activeLink,
+  setActiveLink,
+}) => (
   <header className="header">
     <Button
       variant="ghost"
@@ -22,7 +29,13 @@ const Header: React.FC<HeaderProps> = ({ links, toggleSidebar }) => (
     </Button>
     <nav className="header__navigation" aria-label="header navigation">
       {links.map(({ label, path }) => (
-        <Link to={path} key={path} isUnderlined>
+        <Link
+          to={path}
+          key={path}
+          isUnderlined
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+        >
           {label}
         </Link>
       ))}

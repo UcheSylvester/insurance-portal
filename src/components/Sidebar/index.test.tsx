@@ -10,6 +10,8 @@ const renderSidebar = (props?: Partial<SidebarProps>) => {
     links: basicLinks,
     isSidebarOpen: false,
     toggleSidebar: jest.fn(),
+    activeLink: "/",
+    setActiveLink: jest.fn(),
   };
 
   return render(

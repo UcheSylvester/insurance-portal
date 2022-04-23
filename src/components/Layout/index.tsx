@@ -11,19 +11,27 @@ export interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
     <div className="layout">
       <Sidebar
+        activeLink={activeLink}
+        setActiveLink={setActiveLink}
         links={sideLinks}
         isSidebarOpen={isSidebarOpen}
         toggleSidebar={toggleSidebar}
       />
 
       <div className="layout__content">
-        <Header toggleSidebar={toggleSidebar} links={basicLinks} />
+        <Header
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+          toggleSidebar={toggleSidebar}
+          links={basicLinks}
+        />
         {children}
       </div>
     </div>

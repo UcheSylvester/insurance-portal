@@ -16,12 +16,16 @@ export interface SidebarProps {
   links: ILink[];
   isSidebarOpen: boolean;
   toggleSidebar: () => void;
+  activeLink: string;
+  setActiveLink: (path: string) => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
   links,
   isSidebarOpen,
   toggleSidebar,
+  activeLink,
+  setActiveLink,
 }) => (
   <>
     <nav
@@ -37,7 +41,11 @@ const Sidebar: React.FC<SidebarProps> = ({
         {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
       </Button>
 
-      <Logo brandName="Insurance Portal" />
+      <Logo
+        brandName="Insurance Portal"
+        activeLink={activeLink}
+        setActiveLink={setActiveLink}
+      />
 
       <Avatar src={LadyImage} alt=" Rusalba Ruiz" />
 
@@ -58,7 +66,11 @@ const Sidebar: React.FC<SidebarProps> = ({
       <ul className="sidebar__links">
         {links.map(({ label, path, icon: Icon }) => (
           <li className="sidebar__link" key={path}>
-            <Link to={path}>
+            <Link
+              to={path}
+              activeLink={activeLink}
+              setActiveLink={setActiveLink}
+            >
               <Icon aria-label="link icon" /> <span>{label}</span>
             </Link>
           </li>

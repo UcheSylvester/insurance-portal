@@ -9,6 +9,8 @@ const renderHeader = (props?: Partial<HeaderProps>) => {
   const defaultProps: HeaderProps = {
     links: basicLinks,
     toggleSidebar: jest.fn(),
+    activeLink: "/",
+    setActiveLink: jest.fn(),
   };
 
   return render(
