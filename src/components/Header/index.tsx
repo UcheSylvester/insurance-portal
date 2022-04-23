@@ -12,7 +12,12 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ links, toggleSidebar }) => (
   <header className="header">
-    <Button variant="ghost" className="header__menu" onClick={toggleSidebar}>
+    <Button
+      variant="ghost"
+      className="header__menu"
+      aria-label="toggle sidebar"
+      onClick={toggleSidebar}
+    >
       <MenuIcon />
     </Button>
     <nav className="header__navigation">
