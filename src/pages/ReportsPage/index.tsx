@@ -3,6 +3,8 @@ import ReportCard from "../../components/ReportCard";
 import { REPORT_DATA } from "./data";
 import "./styles.scss";
 
+export interface ReportsPageProps {}
+
 const ReportsPage = () => {
   return (
     <main className="reports-page">

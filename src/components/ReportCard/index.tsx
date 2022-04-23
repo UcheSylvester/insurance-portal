@@ -10,7 +10,7 @@ const ReportCard: React.FC<ReportCardProps> = ({
   name,
   metrics,
 }) => (
-  <article className="report-card">
+  <article className="report-card" data-testid="ReportCard">
     <div className="report-card__title-container">
       <p className="report-card__value">
         {value} <span>{currency}</span>
